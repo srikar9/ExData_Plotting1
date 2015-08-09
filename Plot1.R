@@ -16,10 +16,10 @@ rm(data)
 datetime <- paste(as.Date(data1$Date),data1$Time)
 data1$Datetime <- as.POSIXct(datetime)
 
-## Plot 2
+## Plot 1
 
-plot(data1$Global_active_power~data1$Datetime,type="1",
-     ylab="Global Active Power(kilowatts)",xlab="",)
+hist(data1$Global_active_power,main = "Global Active Power",
+     ylab="Frequency",xlab="Global Active Power(kilowatts)", col ='Red')
 
 ## Saving to file
 
